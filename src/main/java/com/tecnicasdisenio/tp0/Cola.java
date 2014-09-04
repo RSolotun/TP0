@@ -23,18 +23,15 @@ public class Cola implements Queue
 	}
 	public void add(Object item)
 	{
-		assert(primerElemento != null) : primerElemento = new Elemento(item);
-		assert(ultimoElemento != null) : ultimoElemento = primerElemento;
-		assert(ultimoElemento == primerElemento) : ultimoElemento = ultimoElemento.setNext(item);
+		ultimoElemento.setNext(item);
+		ultimoElemento = ultimoElemento.getNextElement();
 	}
 	public Object top()
 	{
-		assert(primerElemento != null);
 		return primerElemento.getCurrentObject();
 	}
 	public void remove()
 	{
-		assert(primerElemento != null);
 		primerElemento = primerElemento.getNextElement();
 	}
 }
