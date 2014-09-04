@@ -12,9 +12,10 @@ public class Elemento
 		this.current = elemento;
 	}
 	
-	public void setNext(Object elemento)
+	public Elemento setNext(Object elemento)
 	{
 		this.next = new Elemento(elemento);
+		return this.next;
 	}
 	
 	public Elemento getNextElement()
